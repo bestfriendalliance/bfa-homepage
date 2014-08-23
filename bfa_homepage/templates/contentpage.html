@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% load fiber_tags %}
+
+{% block bodyclass %}contentpage{% endblock bodyclass %}
+
+{% block extranavbarclasses %}affix inner-pages{% endblock extranavbarclasses %}
+
+{% block content %}
+
+        <!-- Services -->
+        <div class="container">
+            <div class="row services-single">
+                {% show_page_content "main" %}
+<!--                 <div class="col-md-6">
+                    <img src="images/dog-walking.png" alt="Dog walking" />
+                </div>
+                <div class="col-md-6">
+                    <h2>Dog walking services</h2>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12 centered">
+                    <h3><span>Dog caring services</span></h3>
+                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col3">
+                    <a href="#" title="Join the Alliance" class="roundal" id="kennel"></a>
+                    <h3>Join the Alliance</h3>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima.</p>
+                    <form method="get" action="#">
+                        <button type="submit" class="btn btn-default btn-green">Learn more</button>
+                    </form>
+                </div>
+                <div class="col-md-4 col3">
+                    <a href="#" title="Treatments needed" class="roundal" id="grooming"></a>
+                    <h3>Treatments needed</h3>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima.</p>
+                    <form method="get" action="#">
+                        <button type="submit" class="btn btn-default btn-green">Learn more</button>
+                    </form>
+                </div>
+                <div class="col-md-4 col3">
+                    <a href="#" title="Statistics" class="roundal" id="adoption"></a>
+                    <h3>Statistics</h3>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Humanitatis per seacula quarta decima et quinta decima.</p>
+                    <form method="get" action="#">
+                        <button type="submit" class="btn btn-default btn-green">Learn more</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Services end -->
+
+{% endblock content %}

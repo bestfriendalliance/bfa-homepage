@@ -1,0 +1,1 @@
+/home/jamalex/.virtualenvs/bfa-homepage/local/lib/python2.7/site-packages/fiber/static/fiber/js/file-uploader-3.2.0/client/js/handler.xhr.js
