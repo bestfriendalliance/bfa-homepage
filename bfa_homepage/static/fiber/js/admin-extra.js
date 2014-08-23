@@ -1,1 +1,0 @@
-/home/jamalex/.virtualenvs/bfa-homepage/local/lib/python2.7/site-packages/fiber/static/fiber/js/admin-extra.js

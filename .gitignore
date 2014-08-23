@@ -1,2 +1,5 @@
 *.pyc
 *.sqlite3
+/apache2
+/bin
+/lib

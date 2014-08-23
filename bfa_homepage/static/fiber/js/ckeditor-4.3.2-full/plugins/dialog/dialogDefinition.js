@@ -1,1 +1,4 @@
-/home/jamalex/.virtualenvs/bfa-homepage/local/lib/python2.7/site-packages/fiber/static/fiber/js/ckeditor-4.3.2-full/plugins/dialog/dialogDefinition.js
+﻿/*
+ Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
+*/
