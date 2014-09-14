@@ -15,6 +15,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/ie8.css" /><![endif]-->
+    <script>
+        // {{ user.is_logged_in }}
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-54109587-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     </head>
     <body>
     <div class="{% block bodyclass %}{% endblock bodyclass %}">
@@ -62,7 +72,7 @@
                             <button type="submit" class="btn btn-default">Donate</button>
                         </li>
                     </ul> -->
-                    {% show_menu "mainmenu" 1 5 "all" %}
+                    {% show_menu "mainmenu" 1 2 "all" %}
                 </div>
             </div>
         </div>
@@ -74,18 +84,18 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <h6>A little about us</h6>
                         <p><strong>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat.</strong></p>
                         <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam.</p>
                     </div>
-                    <div class="col-md-3 blog">
+<!--                     <div class="col-md-3 blog">
                         <h6>Freshly blogged</h6>
                         <p class="title"><a href="#" title="">Eodem modo typi, qui nunc nobis</a></p>
                         <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.</p>
                         <p><a href="#" title="">Read this post&hellip;</a></p>
-                    </div>
-                    <div class="col-md-3">
+                    </div> -->
+<!--                     <div class="col-md-3">
                         <h6>You may need this</h6>
                         <ul>
                             <li><a href="#" title="">Home</a></li>
@@ -94,8 +104,9 @@
                             <li><a href="#" title="">Terms &amp; conditions</a></li>
                             <li><a href="#" title="">Privacy policy</a></li>
                         </ul>
-                    </div>
-                    <div class="col-md-3 contact-info">
+                    </div> -->
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4 contact-info">
                         <h6>Keep in touch</h6>
                         <p>Join the alliance, become a supporter, or find out more!</p>
                         <p class="social">
@@ -108,7 +119,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 copyright">
-                        <p>&copy; Copyright 2014. All rights reserved. <a href="/" title="Breast Friend Alliance">Breast Friend Alliance</a></p>
+                        <p>&copy; Copyright {{ year }}. All rights reserved. <a href="/" title="Breast Friend Alliance">Breast Friend Alliance</a></p>
                     </div>
                 </div>
             </div>

@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ["breastfriendalliance.org"]
 
 TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
+    'bfa_homepage.custom_context_processors.custom',
 )
 
 # Application definition
@@ -46,6 +47,9 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'bfa_homepage',
     'fiber',
+    'debug_toolbar',
+    'django_extensions',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,9 +104,12 @@ STATICFILES_FINDERS = DEFAULT_SETTINGS.STATICFILES_FINDERS + (
     'compressor.finders.CompressorFinder',
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 FIBER_TEMPLATE_CHOICES = (
     ('contentpage.html', 'Content page template'),
     ('homepage.html', 'Home page template'),
     ('aboutpage.html', 'About page template'),
+    ('learnmore.html', 'Learn More page template'),
 )
