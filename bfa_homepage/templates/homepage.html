@@ -9,11 +9,11 @@
         <!-- Slider -->
         <div id="home_carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
+<!--             <ol class="carousel-indicators">
                 <li data-target="#home_carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#home_carousel" data-slide-to="1"></li>
             </ol>
-
+ -->
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
 
@@ -176,12 +176,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 centered">
-                        <p><a href="#" title="Dougie" class="roundal"></a></p>
-                        <h4>Will you join the alliance, and <a href="adoption-single.html" title="Join the alliance,  a new home?">make breast cancer a disease of the past</a> for both women and dogs?</h4>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-                        <form method="get" action="adoption-single.html">
-                            <button type="submit" class="btn btn-default btn-green">Learn more</button>
+                        <!-- <p><a href="#" title="Dougie" class="roundal"></a></p> -->
+
+                        {% show_page_content "signupinstructions" %}
+
+                        <!-- Begin MailChimp Signup Form -->
+                        <br/>
+                        <form action="//breastfriendalliance.us9.list-manage.com/subscribe/post?u=dcff7a3b123efc31f75c8cf15&amp;id=3a6d4e2d4c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <!-- <label for="mce-EMAIL">Subscribe to our mailing list</label> -->
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required style="padding: 6px; border-radius: 3px; width: 250px; position: relative; top: 2px;">
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;"><input type="text" name="b_dcff7a3b123efc31f75c8cf15_3a6d4e2d4c" tabindex="-1" value=""></div>
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default btn-green"></div>
                         </form>
+                        <!-- End MailChimp Signup Form -->
+
                     </div>
                 </div>
             </div>
@@ -197,18 +206,19 @@
                         <div id="home_testimonial" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#home_testimonial" data-slide-to="0" class="active"></li>
-                                <li data-target="#home_testimonial" data-slide-to="1"></li>
-                                <li data-target="#home_testimonial" data-slide-to="2"></li>
-                                <li data-target="#home_testimonial" data-slide-to="3"></li>
+                                {% for t in models.HomepageTestimonial.all %}
+                                <li data-target="#home_testimonial" data-slide-to="{{ forloop.counter0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+                                {% endfor %}
                             </ol>
 
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <p>"Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum."</p>
+                                {% for t in models.HomepageTestimonial.all %}
+                                <div class="item{% if forloop.first %} active{% endif %}">
+                                    <p>"{{ t.text }}" &mdash;{{ t.author }}</p>
                                 </div>
-                                <div class="item">
+                                {% endfor %}
+<!--                                 <div class="item">
                                     <p>"Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui."</p>
                                 </div>
                                 <div class="item">
@@ -216,7 +226,7 @@
                                 </div>
                                 <div class="item">
                                     <p>"Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui."</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Slider end -->
@@ -231,11 +241,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 centered">
-                    <h3><span>Case Studies</span></h3>
-                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                    {% show_page_content "pageconclusion" %}
                 </div>
             </div>
-            <div class="row adoption">
+            <br/><br/>
+<!--             <div class="row adoption">
                 <div class="col-md-4">
                     <a href="adoption-single.html" title=""><img src="{{ STATIC_URL }}images/dog-4.png" alt="Saint Bernard" /></a>
                     <div class="title">
@@ -284,7 +294,7 @@
                         </h5>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- Adoption end -->
 

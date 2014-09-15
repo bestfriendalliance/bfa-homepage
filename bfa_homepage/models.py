@@ -7,6 +7,7 @@ class HomepageSpotlightLink(models.Model):
     image = models.ImageField(upload_to="homepage_spotlight_links")
     url = models.CharField(max_length=100)
     sort_order = models.FloatField(default=0)
+    show = models.BooleanField(default=False)
 
 
 class HomepageLearnMoreLink(models.Model):
@@ -15,3 +16,11 @@ class HomepageLearnMoreLink(models.Model):
     icon_image = models.ImageField(upload_to="homepage_learn_more_links")
     url = models.CharField(max_length=100)
     sort_order = models.FloatField(default=0)
+    show = models.BooleanField(default=False)
+
+
+class HomepageTestimonial(models.Model):
+    text = models.TextField()
+    author = models.CharField(max_length=80)
+    sort_order = models.FloatField(default=0)
+    show = models.BooleanField(default=False)

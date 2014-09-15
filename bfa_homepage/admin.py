@@ -11,3 +11,8 @@ class HomepageLearnMoreLinkAdmin(admin.ModelAdmin):
     class Meta:
         model = HomepageLearnMoreLink
 admin.site.register(HomepageLearnMoreLink, HomepageLearnMoreLinkAdmin)
+
+class HomepageTestimonialAdmin(admin.ModelAdmin):
+    class Meta:
+        model = HomepageTestimonial
+admin.site.register(HomepageTestimonial, HomepageTestimonialAdmin)
