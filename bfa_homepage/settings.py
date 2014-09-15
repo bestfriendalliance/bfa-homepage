@@ -110,6 +110,6 @@ MEDIA_URL = '/media/'
 FIBER_TEMPLATE_CHOICES = (
     ('contentpage.html', 'Content page template'),
     ('homepage.html', 'Home page template'),
-    ('aboutpage.html', 'About page template'),
+    ('teampage.html', 'Team page template'),
     ('learnmore.html', 'Learn More page template'),
 )
