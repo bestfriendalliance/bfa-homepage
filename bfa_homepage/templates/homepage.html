@@ -17,7 +17,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
 
-                {% for link in models.HomepageSpotlightLink.all %}
+                {% for link in models.HomepageSpotlightLink.published %}
                 <div class="item {% if forloop.first %}active{% endif %}">
                     <img src="{{ MEDIA_URL }}{{ link.image }}" alt="" />
                     <div class="carousel-caption">
@@ -65,7 +65,7 @@
         <!-- Services -->
         <div class="container">
             <div class="row">
-                {% for link in models.HomepageLearnMoreLink.all %}
+                {% for link in models.HomepageLearnMoreLink.published %}
                 <div class="col-md-4 col3">
                     <a href="{{ link.url }}" title="{{ link.title }}" class="roundal" style="background: url('{{ MEDIA_URL }}{{ link.icon_image }}') 50% 50% no-repeat;"></a>
                     <h3>{{ link.title }}</h3>
@@ -206,14 +206,14 @@
                         <div id="home_testimonial" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                {% for t in models.HomepageTestimonial.all %}
+                                {% for t in models.HomepageTestimonial.published %}
                                 <li data-target="#home_testimonial" data-slide-to="{{ forloop.counter0 }}"{% if forloop.first %} class="active"{% endif %}></li>
                                 {% endfor %}
                             </ol>
 
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
-                                {% for t in models.HomepageTestimonial.all %}
+                                {% for t in models.HomepageTestimonial.published %}
                                 <div class="item{% if forloop.first %} active{% endif %}">
                                     <p>"{{ t.text }}" &mdash;{{ t.author }}</p>
                                 </div>
