@@ -85,9 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h6>A little about us</h6>
-                        <p><strong>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat.</strong></p>
-                        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam.</p>
+                        {% show_content "footer_about" %}
                     </div>
 <!--                     <div class="col-md-3 blog">
                         <h6>Freshly blogged</h6>
@@ -107,19 +105,25 @@
                     </div> -->
                     <div class="col-md-3"></div>
                     <div class="col-md-4 contact-info">
+                        {% show_content "footer_contact" %}
                         <h6>Keep in touch</h6>
-                        <p>Join the alliance, become a supporter, or find out more!</p>
+                        <p>
+                            Join the alliance, become a supporter, or find out more!<br/>
+                            <a href="http://eepurl.com/3gmyr">Sign up for the mailing list</a> to stay informed.
+                        </p>
                         <p class="social">
-                            <a href="#" class="facebook"></a> <a href="#" class="pinterest"></a> <a href="#" class="twitter"></a>
+                            <a href="#" class="facebook"></a>
+                            <!-- <a href="#" class="pinterest"></a> -->
+                            <a href="#" class="twitter"></a>
                         </p>
                         <p class="c-details">
-                            <span>Mail</span> <a href="mailto:info@breastfriendalliance.org" title="">info@breastfriendalliance.org</a><br >
+                            <span>Email:</span> <a href="mailto:info@breastfriendalliance.org" title="">info@breastfriendalliance.org</a><br >
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 copyright">
-                        <p>&copy; Copyright {{ year }}. All rights reserved. <a href="/" title="Breast Friend Alliance">Breast Friend Alliance</a></p>
+                        <p>&copy; {{ year }}. All rights reserved. <a href="/" title="Breast Friend Alliance">Breast Friend Alliance</a></p>
                     </div>
                 </div>
             </div>
