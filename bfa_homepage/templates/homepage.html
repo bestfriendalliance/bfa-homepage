@@ -135,36 +135,13 @@
         <div id="c-carousel">
             <div id="wrapper">
                 <div id="carousel">
+                    {% for photo in models.HomepagePhotos.published %}
                     <div>
-                        <a href="{{ STATIC_URL }}images/dog-1.png" title="Dog" data-hover="Sandy the west highland terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-1.png" alt="Dog" />
+                        <a href="{{ MEDIA_URL }}{{ photo.image }}" title="{{ photo.title }}" data-hover="{{ photo.title }}" data-toggle="lightbox" class="lightbox">
+                            <img src="{{ MEDIA_URL }}{{ photo.image }}" alt="{{ photo.title }}" />
                         </a>
                     </div>
-                    <div>
-                        <a href="{{ STATIC_URL }}images/dog-2.png" title="Dog" data-hover="Marty the yorkshire terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-2.png" alt="Dog" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href="{{ STATIC_URL }}images/dog-3.png" title="Dog" data-hover="Kyla the bull terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-3.png" alt="Dog" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href="{{ STATIC_URL }}images/dog-1.png" title="Dog" data-hover="Marty the yorkshire terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-1.png" alt="Dog" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href="{{ STATIC_URL }}images/dog-2.png" title="Dog" data-hover="Sandy the west highland terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-2.png" alt="Dog" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href="{{ STATIC_URL }}images/dog-3.png" title="Dog" data-hover="Kyla the bull terrier" data-toggle="lightbox" class="lightbox">
-                            <img src="{{ STATIC_URL }}images/dog-3.png" alt="Dog" />
-                        </a>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div id="pager" class="pager"></div>
             </div>

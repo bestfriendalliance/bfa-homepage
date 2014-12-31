@@ -44,6 +44,12 @@ class HomepageTestimonial(EditableItemModel):
     def __unicode__(self):
         return self.author or "HomepageTestimonial %d" % self.id
 
+class HomepagePhotos(EditableItemModel):
+    title = models.TextField()
+    image = models.ImageField(upload_to="homepage_photos")
+
+    def __unicode__(self):
+        return self.title or "HomepagePhotos %d" % self.id
 
 class TeamPageTeamMember(EditableItemModel):
     name = models.CharField(max_length=80)
