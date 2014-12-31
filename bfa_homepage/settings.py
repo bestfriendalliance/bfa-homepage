@@ -49,7 +49,6 @@ INSTALLED_APPS = (
     'fiber',
     'debug_toolbar',
     'django_extensions',
-    'south',
 )
 
 MIDDLEWARE_CLASSES = (

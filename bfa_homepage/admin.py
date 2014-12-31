@@ -16,3 +16,8 @@ class HomepageTestimonialAdmin(admin.ModelAdmin):
     class Meta:
         model = HomepageTestimonial
 admin.site.register(HomepageTestimonial, HomepageTestimonialAdmin)
+
+class TeamPageTeamMemberAdmin(admin.ModelAdmin):
+    class Meta:
+        model = TeamPageTeamMember
+admin.site.register(TeamPageTeamMember, TeamPageTeamMemberAdmin)

@@ -198,6 +198,7 @@
         <!-- Rehome end -->
 
         <!-- Testimonials -->
+        {% if models.HomepageTestimonial.published.count %}
         <div class="testimonials" data-stellar-background-ratio="0.6">
             <div class="container">
                 <div class="row">
@@ -235,6 +236,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         <!-- Testimonials end -->
 
         <!-- Adoption -->

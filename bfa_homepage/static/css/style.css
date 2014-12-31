@@ -711,13 +711,14 @@ img {
 }
 
 .staff .member div span {
+	-webkit-transform: rotate(0.000001deg);
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	overflow: hidden;
 	display: block;
-	height: 129.5px;
-	width: 129.5px;
+	height: 130px;
+	width: 130px;
 	position: absolute;
 	top: -60px;
 	left: 50%;
@@ -758,15 +759,15 @@ img {
 	-webkit-transform: rotate(360deg);
 }
 
-.staff .member div span a.facebook {
-	background: url("../images/profile-facebook.png") no-repeat;
+.staff .member div span a.homepagelink {
+	background: url("../images/profile-homepage.png") no-repeat;
 	position: absolute;
 	top: 50%;
 	left: -35%;
 	margin-top: -17px;
 }
 
-.staff .member div span:hover a.facebook {
+.staff .member div span:hover a.homepagelink {
 	left: 15%;
 }
 
